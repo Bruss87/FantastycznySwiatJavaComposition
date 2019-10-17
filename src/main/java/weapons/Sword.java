@@ -1,18 +1,14 @@
 package weapons;
 
-import behaviors.IWeapon;
+import behaviors.IAttack;
 
-public class Sword implements IWeapon {
-
-
+public class Sword extends Weapon implements IAttack {
 
     public Sword(int damage){
-        this.damage = damage;
-    };
-
-
+        super (damage);
+    }
 
     public int attack() {
-
+      return this.damage;
     }
 }

@@ -2,16 +2,20 @@ import characters.Barbarian;
 import characters.Knight;
 import org.junit.Before;
 import org.junit.Test;
+import weapons.Sword;
 
 import static org.junit.Assert.assertEquals;
 
 public class KnightTest {
 
     Knight knight;
+    Sword sword;
+
 
     @Before
     public void before(){
-        knight = new Knight("Bob", 70);
+        sword = new Sword(20);
+        knight = new Knight("Bob", 70, sword);
     }
 
     @Test
@@ -23,4 +27,14 @@ public class KnightTest {
     public void hasHealthPoints(){
         assertEquals(70, knight.getHealthPoints());
     }
+
+    @Test
+    public void hasSword(){
+        Sword sword = (Sword) knight.getWeapon();
+        assertEquals(20, sword.getDamage());
+    }
+
+    @Test
+
+
 }

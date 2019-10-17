@@ -1,8 +1,15 @@
 package characters;
 
-public class Barbarian extends Player {
+import behaviors.IAttack;
 
-   public Barbarian(String name, int healthPoints){
+public class Barbarian extends Fighter implements IAttack {
+
+   public Barbarian(String name, int healthPoints) {
        super(name, healthPoints);
    }
+
+
+    public int attack() {
+        return 0;
+    }
 }
