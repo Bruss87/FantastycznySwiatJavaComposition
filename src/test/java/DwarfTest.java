@@ -1,4 +1,4 @@
-import characters.Barbarian;
+import characters.Dwarf;
 import org.junit.Before;
 import org.junit.Test;
 import weapons.Axe;
@@ -6,50 +6,50 @@ import weapons.Sword;
 
 import static org.junit.Assert.assertEquals;
 
-public class BarbarianTest {
+public class DwarfTest {
 
-    Barbarian barbarian;
+    Dwarf dwarf;
     Sword sword;
 
     @Before
     public void before(){
         sword = new Sword(20);
-        barbarian = new Barbarian("Borris", 75, sword );
+        dwarf = new Dwarf("David", 60, sword);
     }
 
     @Test
     public void hasName(){
-        assertEquals("Borris", barbarian.getName());
+        assertEquals("David", dwarf.getName());
     }
 
     @Test
     public void hasHealthPoints(){
-        assertEquals(75, barbarian.getHealthPoints());
+        assertEquals(60, dwarf.getHealthPoints());
     }
 
     @Test
     public void hasSword(){
-        Sword sword = (Sword) barbarian.getWeapon();
+        Sword sword = (Sword) dwarf.getWeapon();
         assertEquals(20, sword.getDamage());
     }
 
     @Test
     public void canAttackWithSword(){
-        assertEquals(95, barbarian.attack());
+        assertEquals(80, dwarf.attack());
     }
 
     @Test
     public void canAttackWithAxe(){
         Axe axe = new Axe(10);
-        barbarian = new Barbarian("Bob", 60, axe);
-        assertEquals(70, barbarian.attack());
+        dwarf = new Dwarf("Bob", 65, axe);
+        assertEquals(75, dwarf.attack());
     }
 
     @Test
     public void dwarfCanChangeWeapon(){
         Axe axe = new Axe(15);
-        barbarian.changeWeapon(axe);
-        assertEquals(90, barbarian.attack());
+        dwarf.changeWeapon(axe);
+        assertEquals(75, dwarf.attack());
     }
 
 }

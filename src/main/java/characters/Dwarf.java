@@ -2,11 +2,10 @@ package characters;
 
 import behaviors.IAttack;
 
-public class Barbarian extends Fighter implements IAttack {
-
+public class Dwarf extends Fighter implements IAttack {
     IAttack weapon;
 
-    public Barbarian(String name, int healthPoints, IAttack weapon) {
+    public Dwarf(String name, int healthPoints, IAttack weapon){
         super(name, healthPoints);
         this.weapon = weapon;
     }
@@ -23,5 +22,4 @@ public class Barbarian extends Fighter implements IAttack {
     public void changeWeapon(IAttack newWeapon){
         this.weapon = newWeapon;
     }
-
 }
