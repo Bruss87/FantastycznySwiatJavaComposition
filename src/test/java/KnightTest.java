@@ -2,6 +2,7 @@ import characters.Barbarian;
 import characters.Knight;
 import org.junit.Before;
 import org.junit.Test;
+import weapons.Axe;
 import weapons.Sword;
 
 import static org.junit.Assert.assertEquals;
@@ -35,6 +36,22 @@ public class KnightTest {
     }
 
     @Test
+    public void canAttackWithSword(){
+        assertEquals(90, knight.attack());
+    }
 
+    @Test
+    public void canAttackWithAxe(){
+        Axe axe = new Axe(10);
+        knight = new Knight("Bob", 65, axe);
+        assertEquals(75, knight.attack());
+    }
+
+    @Test
+    public void knightCanChangeWeapon(){
+        Axe axe = new Axe(15);
+        knight.changeWeapon(axe);
+        assertEquals(85, knight.attack());
+    }
 
 }
