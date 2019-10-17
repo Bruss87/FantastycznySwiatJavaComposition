@@ -1,4 +1,4 @@
 package behaviors;
 
-public class ISpell {
+public interface ISpell {
 }

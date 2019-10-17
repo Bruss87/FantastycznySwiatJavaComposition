@@ -1,4 +1,4 @@
 package behaviors;
 
-public class IHeal {
+public interface IHeal {
 }

@@ -1,4 +1,4 @@
 package behaviors;
 
-public class IDefend {
+public interface IDefend {
 }

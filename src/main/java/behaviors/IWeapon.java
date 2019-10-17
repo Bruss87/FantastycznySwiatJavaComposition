@@ -1,4 +1,7 @@
 package behaviors;
 
-public class IWeapon {
+public interface IWeapon {
+    int attack( );
+
+
 }
